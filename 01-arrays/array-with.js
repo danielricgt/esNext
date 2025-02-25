@@ -1,7 +1,6 @@
 console.log("Hola Mundo Dani");
 
-const superHeros = [
-    "Dani",
+const state = [
 {
     id: 1,
     name: "Batman",
@@ -18,12 +17,22 @@ const superHeros = [
     id: 4,
     name: "Aquiaman",
 },
- ]
+ ];
+ const index = 1;
+ const newName = "Green Lantern";
 
- const superHeroCopy2 = JSON.parse(JSON.stringify(superHeros));
- console.log("superhero copy 2 caule is ",superHeroCopy2);
+//  const newState = state.map((hero,i) => {
+//     if (i === index) {
+//         hero.name = newName;
+//     }
+//     return {...hero};
+//  });
 
- const superHeroCopy = structuredClone(superHeros);
- superHeroCopy[0] = 'Dr Strange';
- console.log(superHeroCopy);
-console.table(superHeros )
+ const newStateTwo = state.with(index, { 
+    ...state.at(index),
+    name: newName
+ });
+ state[0].name= "Volcan Negro";
+ console.table(newStateTwo);
+
+ console.log("el ultimo hero es: ", state.at(-1 ));
