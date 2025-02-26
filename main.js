@@ -2,7 +2,9 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
-import "./01-arrays/array-with.js";
+//import "./01-arrays/array-with.js";
+import "./01-arrays/arrat-to-methods.js";
+//import "./01-arrays/strcutured-clone.js";
 
 document.querySelector('#app').innerHTML = `
   <div>
